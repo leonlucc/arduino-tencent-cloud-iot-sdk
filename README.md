@@ -1,5 +1,5 @@
-# TencentCloudIoTSDK 腾讯云物联网平台开发库
-腾讯云物联网平台快速对接开发库，封装了物模型协议，支持属性、事件和行动的MQTT消息上传下发。
+# 腾讯云物联网平台Ardunio开发库: TencentCloudIoTSDK 
+腾讯云物联网平台非官方开发库，封装了物模型协议，支持属性、事件和行动的MQTT消息上传下发。
 
 ## 简介
 为简化使用Arduino Framwork的开发者连接腾讯云物联网平台时的基础工作，本项目在PubSubClient等开源库等基础上封装了腾讯云物模型协议，使用时只要提供从腾讯云物联网平台上获得设备身份认证信息（ProductID、DeviceName、DeviceSecret）就可以迅速完成MQTT接入，实现物模型属性、事件和行动的MQTT消息上传下发。
@@ -60,7 +60,7 @@ void loop()
     TencentCloudIoTSDK::sendProperty("humidity", 60);
 }
 ```
-更多示例请参见[这里](https://github.com/leonlucc/arduino-tencent-cloud-iot-sdk//tree/main/examples)
+更多示例请参见[这里](https://github.com/leonlucc/arduino-tencent-cloud-iot-sdk/tree/main/examples)
 
 ## API
 ### 接口 

@@ -319,23 +319,19 @@ void TencentCloudIoTSDK::sendProperties(const char *params)
 void TencentCloudIoTSDK::sendProperty(char *propId, float number)
 {
     addMessageToBuffer(propId, String(number));
-    //messageBufferCheck();
 }
 void TencentCloudIoTSDK::sendProperty(char *propId, int number)
 {
     addMessageToBuffer(propId, String(number));
-    //messageBufferCheck();
 }
 void TencentCloudIoTSDK::sendProperty(char *propId, double number)
 {
     addMessageToBuffer(propId, String(number));
-    //messageBufferCheck();
 }
 
 void TencentCloudIoTSDK::sendProperty(char *propId, char *text)
 {
     addMessageToBuffer(propId, "\"" + String(text) + "\"");
-    //messageBufferCheck();
 }
 
 int TencentCloudIoTSDK::bindProperty(char *propId, CallbackFun callback)
