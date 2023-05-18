@@ -9,7 +9,7 @@
 - [PubSubClient](https://github.com/knolleary/pubsubclient)
 - [ArduinoJson](https://arduinojson.org/)
 - [Crypto](https://rweather.github.io/arduinolibs/index.html)
-- [Base64_Codec](https://github.com/dojyorin/arduino_base64)
+- [base64_encode](https://github.com/dojyorin/arduino_base64)
 
 ## 安装
 打开Arduino IDE -> 项目 -> 加载库 -> 管理库 -> 搜索 "TencentCloudIoTSDK"

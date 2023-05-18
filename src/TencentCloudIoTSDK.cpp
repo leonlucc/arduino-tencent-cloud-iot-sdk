@@ -1,7 +1,7 @@
 
 #include "TencentCloudIoTSDK.h"
 #include <SHA256.h>
-#include <base64.hpp>
+#include <arduino_base64.hpp>
 
 #define MQTT_PORT 1883
 #define MQTT_BUFFER_SIZE 1024
@@ -257,8 +257,8 @@ void TencentCloudIoTSDK::begin(Client &client, const char *productId,
     // 3. 生成 MQTT 的 username 部分, 格式为 ${clientid};${sdkappid};${connid};${expiry}
     sprintf(mqttUsername, "%s;12010126;%d;%ld", mqttClientId, connid, expiry);
     // 4. 对 username 进行签名，生成token
-    char rawKey[BASE64::decodeLength(deviceSecret)];
-    BASE64::decode(deviceSecret, (uint8_t *)rawKey);
+    char rawKey[base64::decodeLength(deviceSecret)];
+    base64::decode(deviceSecret, (uint8_t *)rawKey);
     // 5. 根据物联网通信平台规则生成 password 字段
     String pwd = hmac256(mqttUsername, rawKey) + ";hmacsha256";
     strcpy(mqttPwd, pwd.c_str());
