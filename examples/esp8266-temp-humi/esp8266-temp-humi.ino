@@ -1,4 +1,4 @@
-#include <WiFi.h>
+#include <ESP8266WiFi.h>
 #include <TencentCloudIoTSDK.h>
 
 #define WIFI_SSID "xxxxxx"
@@ -39,4 +39,3 @@ void loop()
     TencentCloudIoTSDK::sendProperty("temperature", 25);
     TencentCloudIoTSDK::sendProperty("humidity", 60);
 }
-

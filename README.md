@@ -22,7 +22,7 @@
 
 #define WIFI_SSID "xxxxxx"
 #define WIFI_PWD "xxxxxxxx"
-#define PRODUCT_KEY "xxxxx"
+#define PRODUCT_ID "xxxxx"
 #define DEVICE_NAME "xxxxx"
 #define DEVICE_SECRET "xxxxxxxxxxx"
 
@@ -50,7 +50,7 @@ void setup()
 
     wifiInit(WIFI_SSID, WIFI_PWD);
 
-    TencentCloudIoTSDK::begin(espClient, PRODUCT_KEY, DEVICE_NAME, DEVICE_SECRET);
+    TencentCloudIoTSDK::begin(espClient, PRODUCT_ID, DEVICE_NAME, DEVICE_SECRET);
 }
 
 void loop()

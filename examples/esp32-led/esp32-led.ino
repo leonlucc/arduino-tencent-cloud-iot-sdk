@@ -3,7 +3,7 @@
 
 #define WIFI_SSID "xxxxxx"
 #define WIFI_PWD "xxxxxxxx"
-#define PRODUCT_KEY "xxxxx"
+#define PRODUCT_ID "xxxxx"
 #define DEVICE_NAME "xxxxx"
 #define DEVICE_SECRET "xxxxxxxxxxx"
 
@@ -32,7 +32,7 @@ void setup()
 
     wifiInit(WIFI_SSID, WIFI_PWD);
 
-    TencentCloudIoTSDK::begin(espClient, PRODUCT_KEY, DEVICE_NAME, DEVICE_SECRET);
+    TencentCloudIoTSDK::begin(espClient, PRODUCT_ID, DEVICE_NAME, DEVICE_SECRET);
 
     // 绑定一个设备属性回调，当远程修改此属性，会触发powerCallback。power_switch 是在设备产品中定义的物模型属性的标识符
     TencentCloudIoTSDK::bindProperty("power_switch", powerSwitchCallback);
